@@ -1,18 +1,30 @@
 let review = document.querySelectorAll(".review");
 let index = 0;
 
-function hideReview() {
+function hideReview(type) {
   for (let i of review) {
     if (i.id != index) {
-      i.style.display = "none";
+      i.style.animation =
+        type == "next"
+          ? "fadeInNext .2s ease 0s 1 normal both"
+          : "fadeInBack .3s ease 0s 1 normal both";
+      setTimeout(() => {
+        i.style.display = "none";
+      }, 200);
     } else {
-      i.style.display = "flex";
+      i.style.animation =
+        type == "next"
+          ? "fadeOutNext .2s ease 0s 1 normal both"
+          : "fadeOutBack .3s ease 0s 1 normal both";
+      setTimeout(() => {
+        i.style.display = "flex";
+      }, 200);
     }
   }
 }
 
 function slide() {
-  hideReview();
+  hideReview("next");
 
   index += 1;
 
@@ -28,7 +40,7 @@ function goBack() {
     index = 2;
   }
 
-  hideReview();
+  hideReview("back");
 }
 
 function goNext() {
@@ -38,7 +50,7 @@ function goNext() {
     index = 0;
   }
 
-  hideReview();
+  hideReview("next");
 }
 
-setInterval(slide, 20000);
+setInterval(slide, 40000);

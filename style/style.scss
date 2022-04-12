@@ -3,12 +3,63 @@ $container-bg-color: #94d2bd;
 $container-color: #037c8e;
 $font: "Roboto", sans-serif;
 
-@keyframes fade {
+@keyframes fadeInNext {
   from {
     opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    margin-right: 0;
   }
   to {
     opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    margin-right: 50vw;
+  }
+}
+
+@keyframes fadeOutNext {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    margin-left: 50vw;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    margin-left: 0;
+  }
+}
+
+@keyframes fadeInBack {
+  from {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    margin-left: 0;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    margin-left: 50vw;
+  }
+}
+
+@keyframes fadeOutBack {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    margin-right: 50vw;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    margin-right: 0;
   }
 }
 
@@ -51,7 +102,7 @@ body {
   font-family: $font;
   border-radius: 30px;
   position: relative;
-  @include flex(flex-start, center, row);
+  @include flex(stretch, stretch, row);
 
   .review {
     width: 50%;
@@ -66,6 +117,10 @@ body {
       font-weight: 400;
     }
 
+    .paragraph {
+      text-indent: 15px;
+    }
+
     .author {
       margin-top: auto;
       align-self: flex-end;
@@ -73,7 +128,7 @@ body {
   }
 
   .img {
-    width: 60%;
+    width: 55%;
     height: 100%;
     border-top-right-radius: inherit;
     border-bottom-right-radius: inherit;
