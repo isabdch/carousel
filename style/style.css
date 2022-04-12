@@ -394,7 +394,8 @@ body {
 .container .circles #c1.checked,
 .container .circles #c2.checked {
   background-color: #037c8e;
-  outline: 1px solid #037c8e;
+  -webkit-box-shadow: 0 0 0 1px #037c8e;
+          box-shadow: 0 0 0 1px #037c8e;
   border: 2px solid #d8e2dc;
 }
 

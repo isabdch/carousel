@@ -259,7 +259,7 @@ body {
 
       &.checked {
         background-color: $container-color;
-        outline: 1px solid $container-color;
+        box-shadow: 0 0 0 1px $container-color;
         border: 2px solid $bg-color;
       }
     }
