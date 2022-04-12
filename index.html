@@ -21,9 +21,16 @@
   </head>
 
   <body>
+    <a
+      href="https://github.com/isabdch/review-carousel"
+      target="_blank"
+      class="github"
+      ><i class="fa-brands fa-github"></i
+    ></a>
+
     <div class="container">
       <div class="review r0" id="0">
-        <h1>techinit</h1>
+        <h1>The most successful big tech company</h1>
         <p class="paragraph">
           I've been working with Techinit for over a year now and they are the
           best tech company I've ever seen. They have an amazing customer
@@ -35,7 +42,7 @@
       </div>
 
       <div class="review r1" id="1">
-        <h1>techinit</h1>
+        <h1>The most successful big tech company</h1>
         <p class="paragraph">
           Working with Techinit has been really great. They're very attentive to
           our needs and always go out of their way to make sure that we have
@@ -45,7 +52,7 @@
       </div>
 
       <div class="review r2" id="2">
-        <h1>techinit</h1>
+        <h1>The most successful big tech company</h1>
         <p class="paragraph">
           I've been working with Techinit for over a year now and they are a
           great company. They are always willing to pitch in where needed, even
@@ -62,6 +69,12 @@
       <button class="next-button" onclick="goNext()">
         <i class="fa-regular fa-angle-right"></i>
       </button>
+
+      <div class="circles">
+        <div class="circle checked" id="c0" onclick="specifyIndex(this)"></div>
+        <div class="circle" id="c1" onclick="specifyIndex(this)"></div>
+        <div class="circle" id="c2" onclick="specifyIndex(this)"></div>
+      </div>
     </div>
   </body>
 </html>

@@ -1,3 +1,55 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+}
+
 @-webkit-keyframes fadeInNext {
   from {
     opacity: 1;
@@ -69,7 +121,7 @@
     opacity: 0;
     visibility: hidden;
     z-index: -1;
-    margin-left: 50vw;
+    margin-left: 20vw;
   }
 }
 
@@ -84,7 +136,7 @@
     opacity: 0;
     visibility: hidden;
     z-index: -1;
-    margin-left: 50vw;
+    margin-left: 20vw;
   }
 }
 
@@ -138,7 +190,8 @@ a {
 body {
   width: 100vw;
   height: 100vh;
-  background-color: #d8e2dc;
+  background: #d8e2dc url("../media/polygon-luminary.svg") no-repeat fixed bottom;
+  background-size: cover;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,11 +208,29 @@ body {
           flex-direction: row;
 }
 
+.github {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  font-size: 2vw;
+  color: #037c8e;
+  opacity: 0.4;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.github:hover {
+  opacity: 0.6;
+}
+
 .container {
   width: 70vw;
   height: 60vh;
   background-color: #94d2bd;
   color: #037c8e;
+  -webkit-box-shadow: 0 0 10px #b4c4ba;
+          box-shadow: 0 0 10px #b4c4ba;
   font-family: "Roboto", sans-serif;
   border-radius: 30px;
   position: relative;
@@ -182,7 +253,7 @@ body {
   width: 50%;
   height: 100%;
   border-radius: inherit;
-  padding: 20px;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,11 +272,9 @@ body {
 }
 
 .container .review h1 {
+  font-size: 1.7em;
   font-weight: 400;
-}
-
-.container .review .paragraph {
-  text-indent: 15px;
+  text-align: center;
 }
 
 .container .review .author {
@@ -255,6 +324,55 @@ body {
   right: 0;
   border-top-right-radius: inherit;
   border-bottom-right-radius: inherit;
+}
+
+.container .circles {
+  position: absolute;
+  bottom: 2%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+}
+
+.container .circles #c0,
+.container .circles #c1,
+.container .circles #c2 {
+  width: 12px;
+  height: 12px;
+  background-color: #d8e2dc;
+  border-radius: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  z-index: 2;
+  padding: 2px;
+}
+
+.container .circles #c0:hover,
+.container .circles #c1:hover,
+.container .circles #c2:hover {
+  -webkit-filter: opacity(0.7);
+          filter: opacity(0.7);
+}
+
+.container .circles #c0.checked,
+.container .circles #c1.checked,
+.container .circles #c2.checked {
+  background-color: #037c8e;
+  outline: 1px solid #037c8e;
+  border: 2px solid #d8e2dc;
 }
 
 .container .r1,
