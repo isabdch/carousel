@@ -23,7 +23,7 @@
 
 ## ✏️ Project Description
 
-This is a carousel of reviews. Each review passes from one to another either automatically, or when the user clicks on the buttons or presses the arrow keys to pass it.
+This is a reviews carousel project. Each review passes from one to another either automatically, or when the user clicks on the buttons or presses the arrow keys to pass it.
 
 <br />
 
