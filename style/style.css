@@ -294,7 +294,7 @@ body {
   font-size: 2.5em;
   text-align: center;
   color: #d8e2dc;
-  text-shadow: 1px 1px 0 #037c8e;
+  text-shadow: 2px 2px 0 #037c8e;
 }
 
 .container .review p {
@@ -425,6 +425,9 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+  .github {
+    font-size: 1.8em;
+  }
   .container {
     width: 90vw;
     height: 70vh;
@@ -474,6 +477,16 @@ body {
   .container .circles #c2 {
     width: 10px;
     height: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .github {
+    margin: 5px;
+  }
+  .container {
+    width: 90vw;
+    height: 90vh;
   }
 }
 /*# sourceMappingURL=style.css.map */
