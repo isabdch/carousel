@@ -9,7 +9,7 @@
 
 ## [SITE HERE]()
 
-![](/media/)
+![](/media/gif-readme.gif)
 
 ---
 
