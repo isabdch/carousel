@@ -1,8 +1,5 @@
 let review = document.querySelectorAll(".review");
 let circle = document.querySelectorAll(".circle");
-let c0 = document.querySelector("#c0");
-let c1 = document.querySelector("#c1");
-let c2 = document.querySelector("#c2");
 let index = 0;
 
 document.addEventListener("keydown", checkKey);
@@ -39,7 +36,6 @@ function hideReview(type) {
     if (i.id != index) {
       // hide review
       i.style.animation = `${animationIn} .2s ease 0s 1 normal both`;
-
       setTimeout(() => {
         i.style.display = "none";
       }, 200);
@@ -52,27 +48,21 @@ function hideReview(type) {
     }
   }
 
-  if (index == 0) {
-    c0.classList.add("checked");
-    c1.classList.remove("checked");
-    c2.classList.remove("checked");
-  } else if (index == 1) {
-    c0.classList.remove("checked");
-    c1.classList.add("checked");
-    c2.classList.remove("checked");
-  } else if (index == 2) {
-    c0.classList.remove("checked");
-    c1.classList.remove("checked");
-    c2.classList.add("checked");
+  for (let c of circle) {
+    if (`c${index}` == c.id) {
+      c.classList.add("checked");
+    } else {
+      c.classList.remove("checked");
+    }
   }
 }
 
 function slide() {
   hideReview("next");
 
-  index += 1;
+  index++;
 
-  if (index > 2) {
+  if (index > circle.length - 1) {
     index = 0;
   }
 }
@@ -81,7 +71,7 @@ function goBack() {
   index--;
 
   if (index < 0) {
-    index = 2;
+    index = circle.length - 1;
   }
 
   hideReview("back");
@@ -90,7 +80,7 @@ function goBack() {
 function goNext() {
   index++;
 
-  if (index > 2) {
+  if (index > circle.length - 1) {
     index = 0;
   }
 
@@ -100,18 +90,8 @@ function goNext() {
 function specifyIndex(e) {
   for (let c of circle) {
     if (c.id == e.id) {
-      c.classList.add("checked");
-    } else {
-      c.classList.remove("checked");
+      index = Number(c.id.charAt(1));
     }
-  }
-
-  if (e.id == "c0") {
-    index = 0;
-  } else if (e.id == "c1") {
-    index = 1;
-  } else if (e.id == "c2") {
-    index = 2;
   }
 
   hideReview("fade");
