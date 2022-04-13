@@ -17,7 +17,7 @@ function checkKey(e) {
   }
 }
 
-function hideReview(type) {
+function updateReview(type) {
   let animationIn;
   let animationOut;
 
@@ -58,13 +58,14 @@ function hideReview(type) {
 }
 
 function slide() {
-  hideReview("next");
-
+  
   index++;
-
+  
   if (index > circle.length - 1) {
     index = 0;
   }
+  
+  updateReview("next");
 }
 
 function goBack() {
@@ -74,17 +75,7 @@ function goBack() {
     index = circle.length - 1;
   }
 
-  hideReview("back");
-}
-
-function goNext() {
-  index++;
-
-  if (index > circle.length - 1) {
-    index = 0;
-  }
-
-  hideReview("next");
+  updateReview("back");
 }
 
 function specifyIndex(e) {
@@ -94,7 +85,7 @@ function specifyIndex(e) {
     }
   }
 
-  hideReview("fade");
+  updateReview("fade");
 }
 
 setInterval(slide, 30000);
