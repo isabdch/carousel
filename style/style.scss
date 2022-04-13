@@ -108,6 +108,19 @@ $font: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: $container-color transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $container-color;
+  background-clip: content-box;
+  border: 8px solid transparent;
+  border-radius: 9999px;
 }
 
 html {
@@ -220,6 +233,10 @@ body {
     &:hover {
       opacity: 1;
     }
+
+    &:focus {
+      outline: $container-color;
+    }
   }
 
   .go-back-button {
@@ -298,6 +315,20 @@ body {
   }
 }
 
+@media screen and (min-height: 1024px) {
+  .container {
+    .review {
+      p {
+        text-shadow: 1px 1px 0px $container-bg-color;
+      }
+    }
+
+    .img {
+      width: 75%;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .github {
     font-size: 1.8em;
@@ -306,6 +337,14 @@ body {
   .container {
     width: 90vw;
     height: 70vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    .review {
+      overflow-y: auto;
+    }
   }
 }
 
@@ -318,7 +357,6 @@ body {
     .review {
       width: 100%;
       height: 40%;
-      overflow-y: auto;
 
       h1 {
         font-size: 2em;
@@ -347,6 +385,14 @@ body {
         width: 10px;
         height: 10px;
       }
+    }
+  }
+}
+
+@media screen and (max-height: 440px) {
+  .container {
+    .review {
+      overflow-y: auto;
     }
   }
 }

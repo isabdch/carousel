@@ -180,6 +180,19 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #037c8e transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #037c8e;
+  background-clip: content-box;
+  border: 8px solid transparent;
+  border-radius: 9999px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -337,6 +350,11 @@ body {
   opacity: 1;
 }
 
+.container .go-back-button:focus,
+.container .next-button:focus {
+  outline: #037c8e;
+}
+
 .container .go-back-button {
   left: 0;
   border-top-left-radius: inherit;
@@ -424,6 +442,15 @@ body {
   }
 }
 
+@media screen and (min-height: 1024px) {
+  .container .review p {
+    text-shadow: 1px 1px 0px #94d2bd;
+  }
+  .container .img {
+    width: 75%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .github {
     font-size: 1.8em;
@@ -431,6 +458,12 @@ body {
   .container {
     width: 90vw;
     height: 70vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .review {
+    overflow-y: auto;
   }
 }
 
@@ -455,7 +488,6 @@ body {
   .container .review {
     width: 100%;
     height: 40%;
-    overflow-y: auto;
   }
   .container .review h1 {
     font-size: 2em;
@@ -477,6 +509,12 @@ body {
   .container .circles #c2 {
     width: 10px;
     height: 10px;
+  }
+}
+
+@media screen and (max-height: 440px) {
+  .container .review {
+    overflow-y: auto;
   }
 }
 
