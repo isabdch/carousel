@@ -13,7 +13,7 @@ function checkKey(e) {
     goBack();
   } else if (key == "39") {
     // if right arrow key is pressed...
-    goNext();
+    slide();
   }
 }
 
