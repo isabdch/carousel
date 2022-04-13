@@ -1,11 +1,8 @@
 # Carousel
-
-![](https://img.shields.io/github/forks/isabdch/carousel?color=%2394d2bd&style=for-the-badge)
 ![](https://img.shields.io/github/languages/count/isabdch/carousel?color=%2394d2bd&style=for-the-badge)
 ![](https://img.shields.io/github/repo-size/isabdch/carousel?color=%2394d2bd&style=for-the-badge)
 ![](https://img.shields.io/github/issues/isabdch/carousel?color=%2394d2bd&style=for-the-badge)
-![](https://img.shields.io/github/stars/isabdch/carousel?color=%2394d2bd&style=for-the-badge)
-![](https://img.shields.io/github/license/isabdch/carousel?color=%2394d2bd&style=for-the-badge)
+
 
 ## [SITE HERE](https://isabdch.github.io/carousel/)
 
