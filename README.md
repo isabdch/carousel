@@ -31,7 +31,7 @@ This is a reviews carousel project. Each review passes from one to another eithe
 
 - ### HTML;
 
-- ### Sass;
+- ### SCSS;
 
 - ### JavaScript.
 
