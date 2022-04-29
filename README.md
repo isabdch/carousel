@@ -41,8 +41,6 @@ This is a reviews carousel project. Each review passes from one to another eithe
 
 This project is finished.
 
-<br />
-
 ---
 
 Made with 💜 by Isabelle Brandão 👋 [See my LinkedIn](https://www.linkedin.com/in/isabelle-brand%C3%A3o-5645551a8/)
